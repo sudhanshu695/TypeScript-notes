@@ -25,7 +25,7 @@ console.log(tech);
 
 console.log(typeof tech);
 
-//This will throw error in ts
+//This will throw an error in ts
 // tech = "hey"
 
 
