@@ -118,3 +118,27 @@ const song1 : Song = {
 };
 console.log(song1.printSong(song1.title, song1.singer, song1.available));
 
+// =========================With Classes================ 
+
+
+interface Vehical {
+    start() : void;
+    stop() : void;
+}
+
+
+// implements keyword used by a class to agree to the following structured
+
+class Car implements Vehical {
+    start(): void {
+        console.log(" Car is starting");
+    }
+    stop(): void {
+        console.log(" Car is stopping");
+    }
+}
+
+
+const c1 = new Car;
+c1.start();
+c1.stop();
