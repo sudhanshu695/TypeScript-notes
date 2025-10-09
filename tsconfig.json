@@ -1,44 +1,42 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    // Target JavaScript version
+    "target": "es6",
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    // Module system
+    "module": "es6",
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // Stricter Typechecking Options
+    // Enable strict type checking
+    "strict": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
+    // Allows default imports from CommonJS modules (if needed later)
+    "esModuleInterop": true,
 
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
+    // Skip type checks in node_modules
+    "skipLibCheck": true,
+
+    // Output configuration
+    "outDir": "./dist",        // compiled JS goes here
+    "rootDir": "./src",        // source TS files live here
+    "sourceMap": false,         // generate .map files for debugging
+    "declaration": false,       // generate .d.ts files
+    "declarationMap": false,    // generate .d.ts.map files
+
+    // Module handling
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
-  }
+
+    // JSX support (if you ever use React)
+    "jsx": "react-jsx"
+  },
+
+  // Include all TS files inside src folder
+  "include": ["src/**/*"],
+
+  // Exclude node_modules and dist from compilation
+  "exclude": ["node_modules", "dist"]
 }

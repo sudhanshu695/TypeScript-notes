@@ -71,3 +71,40 @@ const numbers = [1, 2, 3, 4, 5];
 const result = filterArray<number>(numbers, (num) => num > 3);
 
 console.log(result);
+
+
+
+// MORE EXAMPLESSS 
+
+//--> we have created an interface now we can use "Fruit" as a data type
+
+interface Fruit {
+  name : string;
+  color : string;
+}
+
+
+// now we are creating one array with the name of fruitArray and using Fruit as a data type which we have declared 
+
+const fruitArray : Fruit[] = [
+      {name : "Apple" , color : "Red"},
+      {name : "Banana" , color : "Yellow"},
+      {name : " Watermelon" , color : "Green"},
+      {name : "Cherry" , color : "Red"},
+];
+
+
+const redFruits = filterArray<Fruit>(fruitArray, (fruit) => fruit.color === "Red");
+
+console.log(redFruits);
+
+
+
+// ================================================================================================================ 
+
+function reversePair<T , U>(value1 : T , value2 : U) : [U , T] {
+  return [value2 , value1];
+}
+
+
+console.log(reversePair(2 , "Apple"));
